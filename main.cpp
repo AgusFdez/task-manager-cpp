@@ -35,7 +35,7 @@ int main()
     std::vector<Tarea> tareas;
 
     while (opcion != 3) {
-        system("CLS");
+        system("clear");
 
         switch(opcion){
         case 0: {
@@ -58,13 +58,20 @@ int main()
             opcion = 0;
         } break;
         
-        
+        case 2: {
+            std::cout << " === Lista de tareas === " << std::endl;
+            for (int i = 0; i < tareas.size(); i++) {
+                tareas[i].mostrar();
+                std::cout << "------------------------" << std::endl;
+            }
+            std::cout << " Presione enter para volver al menu" << std::endl;
+            std::cin.ignore();
+            opcion = 0;
+
+        } break;
+
         }
- 
-
     }
-
-
 
     return 0;
 }
